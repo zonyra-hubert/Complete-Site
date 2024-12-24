@@ -1,0 +1,139 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+   background-image: url(image.png);
+   background-size: cover; /* Ensures the image covers the entire background */ 
+   background-position: center; /* Centers the background image */
+   
+
+
+}
+
+.container{
+    width: 400px;
+    padding: 25px 35px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border-radius: 10px;
+    background-color:#1abc9c;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 0 6px  rgba(0, 0, 0, 0.5);
+}
+
+.container form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.container form input[type="text"]{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+}
+
+.container form button[type="submit"]{
+    width: 20%;
+    padding: 10px;
+    background: #06332a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.container form button[type="submit"]:hover{
+    background: #ffffff;
+    color: #057e66;
+    transition: 0.3s;
+    font-weight: bold;
+    scale: 1.09;
+}
+
+
+.container h1{
+    text-align: center;
+    margin-bottom: 10px;
+    color: white;
+}
+.wheater-data{
+   margin-top: 10px;
+}
+
+
+
+ /* Default styling */
+.weather-data {
+    margin-bottom: 15px;
+    padding-top: 2px;
+      text-align: center;
+      box-shadow: 0 0 6px  rgba(0, 0, 0, 0.5);
+      border-radius: 5px;
+      background:  #f7f7f7;
+      padding-bottom: 3px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: #333;
+    transition: background 0.5s ease;
+}
+
+/* Cloudy style */
+.cloudy {
+    background: linear-gradient(to bottom, #b0c4de, #778899);
+    color: #333;
+}
+
+/* Sunny style */
+.sunny {
+    background: linear-gradient(to bottom, #ffdd67, #ffba00);
+    color: #333;
+}
+
+/* Rainy style */
+.rainy {
+    background: linear-gradient(to bottom, #8fbc8f, #2f4f4f);
+    color: #fff;
+}
+
+/* Snowy style */
+.snowy {
+    background: linear-gradient(to bottom, #e0f7ff, #fff);
+    color: #333;
+}
+
+/* Additional styling for other weather types can be added similarly */
+
+
+
+@media only screen and (max-width: 768px) {
+    .container{
+        width: 100%;
+        padding: 15px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .container{
+        width: 100%;
+        padding: 20px;
+    }
+}
+

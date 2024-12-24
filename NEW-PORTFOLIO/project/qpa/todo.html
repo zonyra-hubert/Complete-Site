@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPA Calculator</title>
+    <link rel="icon" href="LOGO.jpg" type="image/png">
+</head>
+<body >
+<section>
+    <div class="container">
+      
+        <h2>G.P.A. Calculator</h2>
+        <div id="courses">
+            <div class="course">
+                <div class="box1">
+
+                    <div class="seperate">
+                        
+                    <label for="grade">Grade</label>
+                    <input type="text" placeholder="Enter you grade(A)" class="grade" name="grade">
+            
+            
+                    <label for="credithr">Credit Hour</label>
+                    <input type="number" class="credithr" name="credithr" placeholder="Enter the credit hour(3)">
+                    </div>
+            
+            
+                </div>
+            </div>
+
+
+           
+    
+    
+            
+        </div>
+    
+            
+        <div class="buttons">
+
+            <input type="button" value="Add Course" class="button" id="addCourseButton">
+
+   
+            <input type="button" value="Calculate GPA" class="button" id="calculateButton">
+        </div>
+        <strong>GPA: </strong>
+        <span id="gpa"></span>
+    
+
+    </div>
+
+</section>
+    <script>
+      document.getElementById('addCourseButton').addEventListener('click', function() {
+    var courseDiv = document.createElement('div');
+    courseDiv.className =  'box1';
+    courseDiv.innerHTML = `
+            <div class="seperate" style =" border: 1px solid black;" >
+            <label for="grade">Grade</label>
+            <input type="text" placeholder="Enter your (A)" class="grade" name="grade">
+    
+    
+            <label for="credithr">Credit Hour</label>
+            <input type="number" class="credithr" name="credithr" placeholder="Enter the credit hour(3)">
+            </div>
+    
+    `;
+    document.getElementById('courses').appendChild(courseDiv);
+});
+
+document.getElementById('calculateButton').addEventListener('click', function() {
+    var gradeElements = document.getElementsByClassName('grade');
+    var creditHrElements = document.getElementsByClassName('credithr');
+    var totalGradePoints = 0;
+    var totalCreditHours = 0;
+
+    for (var i = 0; i < gradeElements.length; i++) {
+        var grade = gradeElements[i].value.toUpperCase();
+        var creditHr = parseFloat(creditHrElements[i].value);
+        var gradePoint;
+
+        switch (grade) {
+            case 'A':
+                gradePoint = 4.0;
+                break;
+            case 'B+':
+                gradePoint = 3.5;
+                break;
+            case 'B':
+                gradePoint = 3.0;
+                break;
+            case 'C+':
+                gradePoint = 2.5;
+                break;
+            case 'C':
+                gradePoint = 2.0;
+                break;
+            case 'D+':
+                gradePoint = 1.5;
+                break;
+            case 'D':
+                gradePoint = 1.0;
+                break;
+            case 'E':
+                gradePoint = 0.5;
+                break;
+            case 'F':
+                gradePoint = 0.0;
+                break;
+            default:
+                gradePoint = 0.0;
+                alert('Invalid grade entered for course ' + (i + 1));
+                return;
+        }
+
+        totalGradePoints += gradePoint * creditHr;
+        totalCreditHours += creditHr;
+    }
+
+    var gpa = totalGradePoints / totalCreditHours;
+    document.getElementById('gpa').textContent = gpa.toFixed(2);
+});
+       </script>
+</body>
+</html>

@@ -1,0 +1,361 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background: #001e4d;
+    /* background-image: url("bg.png");
+    background-size: cover;         /* Makes the image cover the entire container */
+    /* background-repeat: no-repeat;   /* Prevents the image from repeating */
+    /* background-position: center; */
+}
+
+.app{
+ background: #fff;
+ width: 90%; 
+ max-width: 6000px;
+ margin: 100px auto 0;
+ border-radius: 10px;
+ padding: 30px;
+
+
+}
+.app h1{
+    font-size: 25px;
+    font-weight: 600;
+    color: #001e4d;
+    border-bottom: 1px solid #333;
+    padding-bottom: 30px;
+
+
+}
+
+.quiz{
+    padding: 20px 0;
+}
+
+.quiz h2{
+   font-size: 18px;
+   color: #001e4d;
+   font-weight: 600 ;  
+}
+
+.btn{
+    background: wheat;
+    color: #222;
+    font-weight: 500;
+    width: 100%;
+    border: 1px solid #222;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.btn:hover:not([disabled]){
+    background: #222;
+    color: white;
+
+}
+.btn:disabled{
+    cursor: no-drop;
+}
+
+#next-btn{
+  background: #001e4d;
+  color: #fff;
+  font-weight: 500;
+  width: 150px;
+  max-width: 100px;
+  border: 0;
+  padding: 10px;  
+  margin: 20px auto 0;
+  border-radius: 4px;
+  cursor: pointer;   
+  display: none;
+  transition: all 0.3s;
+}
+
+#next-btn:hover{
+    scale: 1.1;
+    color: #001e4d;
+    border: 2px solid #001e4d;
+    background-color: transparent;
+    font-weight: 700;
+    box-shadow: 0 0 40px #001e4d;
+}
+
+.correct{
+    background: #9aeabc;
+
+}
+
+.incorrect{
+    background: #ff9393;
+}
+
+.login-container, .admin-dashboard {
+    background: #fff;
+    width: 90%;
+    max-width: 400px;
+    margin: 100px auto;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+}
+
+.login-container h1, .admin-dashboard h1 {
+    font-size: 25px;
+    font-weight: 600;
+    color: #001e4d;
+    padding-bottom: 30px;
+}
+
+.login-container input, .admin-dashboard input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.login-container button, .admin-dashboard button {
+    background: #001e4d;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-container button:hover, .admin-dashboard button:hover {
+    background: #222;
+}
+
+nav{
+    width: 100%;
+    height: 10vh;
+    position: over;
+    background-color: black;
+}
+
+.nav-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo{
+    color: silver;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.logo span{
+    color: #077b32;
+    text-shadow: 0 0 10px #077b32;
+}
+
+.hamburg,
+.cancel{
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    color: white;
+    display: none;
+    font-size: clamp(2.5rem, 0.5rem + 5vw, 3rem);
+}
+
+.nav-container .links{
+    display: flex;
+}
+
+.nav-container .links a{
+    position: relative;
+    font-size: 1.2rem;
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: 550;
+    transition: 0.3s linear;
+}
+
+.nav-container .links a::before{
+    position: absolute;
+    content: "";
+    bottom: -3px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: #077b32;
+    transition: 0.2s linear;
+}
+
+.nav-container .links a:hover::before{
+    width: 100%;
+}
+
+.nav-container .links a:hover{
+    color: #077b32;
+}
+
+.dropdown{
+    z-index: 1000;
+    position: absolute;
+    top: 0;
+    transform: translateY(-500px);
+    width: 100%;
+    height: auto;
+    backdrop-filter: blur(4px) brightness(40%);
+    box-shadow:  0 0 20px black;
+    transition: 0.2s linear;
+}
+
+.dropdown .links a{
+    display: flex;
+    color: white;
+    text-decoration: none;
+    justify-content: center;
+    padding: 15px 0;
+    align-items: center;
+    transition: 0.2s linear;
+}
+.dropdown .links a:hover{
+    background-color: #077b32;
+}
+
+@media (max-width:884px) {
+    nav .logo{
+        position: absolute;
+        top: 16px;
+        left: 15px;
+        font-size: 1.5rem;
+    }
+    .nav-container .links{
+        display: none;
+    }
+    .hamburg,
+    .cancel{
+        display: block;
+    }
+ 
+
+}
+
+.message-container{
+    
+    background-color: #fff;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    line-height: 25px;
+    padding: 5px;
+    height: fit-content;
+    border-radius: 0 0 10px;
+    font-size: 20px;
+    overflow: hidden;
+}
+
+.message-container h1,h4{
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #001e4d;
+}
+
+
+.message-container p{
+    margin: 5px;
+}
+.message-container span{
+    color: #001e4d;
+    font-weight: bold;
+    text-decoration: underline;
+    text-align: center;
+}
+/* .message-container button{
+    background: #001e4d;
+    color: #fff;
+    font-weight: 500;
+    
+    max-width: 500px;
+    border: 0;
+    padding: 10px;  
+    margin: 20px auto 0;
+    border-radius: 4px;
+    cursor: pointer;   
+    transition: all 0.3s;
+    
+  }
+  .message-container button:hover{
+   
+        scale: 1.1;
+        color: #001e4d;
+        border: 2px solid #001e4d;
+        background-color: transparent;
+        font-weight: 700;
+        box-shadow: 0 0 40px #001e4d;
+        max-width: 500px;
+   
+
+  }  */
+  
+.message-container a{
+    
+    display: block;
+    margin: 0 auto;
+    width:500px ;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    width: 150px;
+    font-weight: bold;
+    font-size: large;
+    background: #001e4d;
+    border-radius: 3px;
+    transition: all 0.3s;
+   
+}
+.message-container a:hover{
+    
+    font-weight: bold;
+    color: #001e4d;
+    scale: 1.1;
+    color: #001e4d;
+    border: 2px solid #001e4d;
+    background-color: transparent;
+    font-weight: 700;
+    box-shadow: 0 0 40px #001e4d;
+    max-width: 500px;
+
+}
+
+.message-container i{
+    color: #077b32;
+}
+
+.message-block, .block-message{
+    display: block;
+  
+  padding-top: 2px;
+    text-align: center;
+    box-shadow: 0 0 6px  rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    background:  #f7f7f7;
+    padding-bottom: 3px;
+}
+.message-block{
+    
+    margin: 15px;   
+}
+.block-message{
+    margin: 10px;
+}

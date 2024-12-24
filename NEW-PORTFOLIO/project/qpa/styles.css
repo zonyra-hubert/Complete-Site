@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  
+  
+  body{
+    background: linear-gradient(to right, #ffa6b7, #1e6faf);
+      font-family: "Poppins", sans-serif;
+      justify-content: center;
+        align-items: center;
+        display: flex;
+      
+  }
+  section{
+    justify-content: center;
+    align-items: center;
+    background:transparent;
+     margin-top: 150px;
+     padding: 5px;
+     border-radius: 10px;
+    
+    
+     /* display: flex; */
+     transition: background-color 0.3s ease;
+    
+     border-top: white 1px solid;
+  }
+
+
+     @media (max-width:884px) {
+        section{
+            margin-top: 100px;
+        padding: 5px;
+            
+    }
+
+    .container{
+        margin-top: 100px;
+
+    }
+}
+
+@media (max-width:440px){
+    .container {
+      margin-top: 100px;
+    }
+
+    
+}
+
+.container{
+    border-radius: 5px;
+  justify-content: space-around;
+  background: linear-gradient(to bottom, #ffffff, #f4f7f9);
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 0 6px  rgba(0, 0, 0, 0.5);
+  
+  
+}
+
+
+.container h2{
+    display: inline-block;
+    width: 600px;
+    background-color: rgb(0, 183, 255);
+}
+
+.box1 label{
+    font-size:20px;
+    color: black;
+    font-weight: bold;
+    display: flex;
+    margin-left: 150px;
+    text-align: center;
+
+}
+
+.box1 input{
+    width: 350px;
+    margin: 10px;
+    margin-left: 50px;
+    height: 30px;
+    border-radius: 5px;
+    border-color: #1e6faf;
+    
+
+}
+.box1 input[active]{
+    border: none;
+   
+}
+
+.buttons{
+    margin-bottom: 10px;
+}
+
+.buttons input{
+    width: 150px;
+    font-weight: bold;
+    margin-left: 40px;
+    margin-top: 10px;
+    height: 30px; 
+    border: none;
+    border-radius: 5px;
+  cursor: pointer;
+    background-color: #0ed2f7;
+    transition: background-color 0.3s ease;
+}
+
+.buttons input:hover{
+    background-color: transparent !important;
+    color: #013742;
+    border: 3px solid #0ed2f7;
+    font-weight: bold;
+    border-color: #013742;
+}
+
+strong{
+    font-size: 18px;
+    text-align: center;
+   
+
+}
+.seperate{
+    width: 100%;
+    border: 2px solid black;
+    border-radius:0px 0 5px 5px;
+    margin: 5px 0 0;
+
+}
+

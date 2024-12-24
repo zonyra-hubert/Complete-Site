@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Projects</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="project.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+   
+    <link rel="icon" href="img/logo.jpeg" type="image/png">
+</head>
+<body >
+    <nav>
+        <div class="nav-container">
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1500" >
+                Hubert <span>Zonyra</span>
+            </div>
+        
+    
+          <div class="links">
+            <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"><a href="index.html">Home</a></div>
+            <!-- <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><a href="#">About</a></div> -->
+            <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a href="project.html"> Projects</a></div>
+            <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a href="skills.html">Skills</a></div>
+
+         
+           
+          
+            <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500"><a href="contact1.html">Contact</a></div>
+        </div>
+        </div>
+       
+    
+        <i class="fa-solid fa-bars hamburg " onclick="hamburg()"></i>
+        <div class="dropdown">
+            <div class="links">
+                <a href="index.html" >Home</a> 
+                <!-- <a href="#" >About</a>  -->
+                <a href="skills.html" >Skills</a> 
+                <a href=" project.html" > Projects</a> 
+                <a href="contact1.html" >Contact</a> 
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div> 
+        </div>
+        
+     
+    </nav>
+
+
+
+    <section>
+        <div class="header">
+            <h1>Projects</h1>
+        </div>
+
+        <div class="container">
+
+          
+            <div class=" project-grid">
+               <div class="projects item1  ">
+                    <img src="img/quiz-logo.png" alt="quiz-app" onclick="redirectPage('project/quiz/quiz-info.html')" >
+                <h3>Quiz App</h3>
+               </div>
+               <div class=" projects item2">
+                <img class="img" src="img/qpa-logo.png" alt="gpa-calculator" onclick="redirectPage('project/qpa/todo.html')">
+                <h3>G.P.A. Calculator</h3>
+            </div>
+               <div class=" projects item3">
+                <img src="img/weater-app.png" alt="weater"onclick="redirectPage('project/weater/Wheater.html')">
+                <h3>Weather App</h3>
+               
+            </div>
+               <div class=" projects item4">
+                <img src="img/code-editor.png" alt="code-editer" onclick="redirectPage('project/code-editor/code-editor.html')">
+                <h3>Code Editor</h3>
+               </div>
+               <div class="projects item5">
+                <img src="img/qr-code.png" alt="qr-code" onclick="redirectPage('project/qr-code.html')">
+                <h3>QR Code Generator</h3>
+            </div>
+                
+            </div> 
+            
+
+        </div>
+    
+
+        
+    </section>
+
+    
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({offset:0});
+    </script>
+        <script src="navbar.js"></script>
+        <!-- <script src="skills.js"></script> -->
+    
+        <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+      
+    </script>
+</body>
+</html>
